@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Set;
 
 import com.catalinionescu.adventofcode.common.Log;
+import com.catalinionescu.adventofcode.datastructures.MoveDirection;
 
 public class Day013 {
     public static String INPUT_URL = "https://adventofcode.com/2018/day/13/input";
@@ -58,23 +59,6 @@ public class Day013 {
      */
     public static boolean isTrackType(char ch) {
         return trackTypes.containsKey(ch);
-    }
-
-    enum MoveDirection {
-        UP('^'),
-        DOWN('v'),
-        LEFT('<'),
-        RIGHT('>');
-
-        private final char ch;
-
-        MoveDirection(char ch) {
-            this.ch = ch;
-        }
-
-        public char getCh() {
-            return ch;
-        }
     }
 
     private static Map<Character, MoveDirection> moveDirections = new HashMap<>();
